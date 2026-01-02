@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>K-Track</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-bar">
+      <div class="app-title">K-Track</div>
+      <button class="refresh-button" id="refreshButton" aria-label="Refresh list">
+        ⟳
+      </button>
+    </header>
+
+    <main>
+      <section class="info">
+        <h1>Team Status</h1>
+        <p>Responsive dashboard designed for quick checks on mobile.</p>
+      </section>
+
+      <section id="userList" class="card-list" aria-live="polite">
+        <div class="loading">Loading users…</div>
+      </section>
+    </main>
+
+    <footer class="footer">Updated for a mobile-friendly view.</footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
