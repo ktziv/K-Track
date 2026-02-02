@@ -15,13 +15,13 @@ Then open [http://localhost:3000](http://localhost:3000) on your phone or deskto
 
 ## Netlify deployment
 
-This project is configured for Netlify static hosting by publishing `K-Track-Server/public`. The included `netlify.toml` sets the publish directory automatically, and `_redirects` ensures all paths load the main page.
+This project is configured for Netlify static hosting by publishing `K-Track-Server/public`. The included `netlify.toml` sets the base directory and publish folder automatically, and `_redirects` ensures all paths load the main page.
 
 If you are using the Netlify UI, make sure:
 
-- **Base directory** is the repo root.
+- **Base directory** is `K-Track-Server`.
 - **Build command** is empty.
-- **Publish directory** is `K-Track-Server/public`.
+- **Publish directory** is `public`.
 
 ## Project structure
 
