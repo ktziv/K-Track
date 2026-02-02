@@ -126,6 +126,30 @@ main {
   margin: 4px 0 0;
   color: var(--muted);
   font-size: 13px;
+  display: none;
+}
+
+.card.is-expanded .user-meta {
+  display: block;
+}
+
+.details-toggle {
+  margin-top: 8px;
+  align-self: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.details-toggle:active {
+  transform: scale(0.97);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .status {

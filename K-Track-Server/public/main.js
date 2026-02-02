@@ -41,7 +41,18 @@ function renderUsers(users) {
     const lastSeen = user.lastSeen ? new Date(user.lastSeen).toLocaleString() : 'Unknown';
     meta.textContent = `Last seen: ${lastSeen}`;
 
-    details.append(name, meta);
+    const toggle = document.createElement('button');
+    toggle.className = 'details-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.textContent = 'View details';
+    toggle.addEventListener('click', () => {
+      const isExpanded = card.classList.toggle('is-expanded');
+      toggle.setAttribute('aria-expanded', String(isExpanded));
+      toggle.textContent = isExpanded ? 'Hide details' : 'View details';
+    });
+
+    details.append(name, meta, toggle);
 
     const status = document.createElement('span');
     const statusClass = getStatusClass(user.status);
