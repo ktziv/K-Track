@@ -1,0 +1,3 @@
+[build]
+  base = "K-Track-Server"
+  publish = "public"
